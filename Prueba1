@@ -1,0 +1,7 @@
+stash
+Guarda cambios hechos en el staging area actual y en el directorio de trabajo para luego. Guarda los cambios que no están listos para hacerles commit y que así puedas volver a ellos mientras trabajas en otra cosa. Este comando funciona con una pila de cambios.
+
+git stash   guarda los cambios actuales en la pila.
+git stash list   ver lo que hay en la pila.
+git stash apply   aplica en el directorio actual los cambios guardados en la cima de la pila.
+git stash drop   borra la cima de la pila.
