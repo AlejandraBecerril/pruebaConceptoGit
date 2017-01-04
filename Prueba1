@@ -1,4 +1,4 @@
-stash
+El stash de prueba
 Guarda cambios hechos en el staging area actual y en el directorio de trabajo para luego. Guarda los cambios que no están listos para hacerles commit y que así puedas volver a ellos mientras trabajas en otra cosa. Este comando funciona con una pila de cambios.
 
 git stash   guarda los cambios actuales en la pila.
