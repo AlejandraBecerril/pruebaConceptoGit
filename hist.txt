@@ -1,0 +1,111 @@
+ 503  mkdir pruebaConceptoGit
+  504  cd pruebaConceptoGit/
+  505  touch Prueba1
+  506  tocuh Prueba2
+  507  touch Prueba2
+  508  touch Prueba3
+  509  git init
+  510  git status
+  511  git add -A
+  512  git commit -m "Iniciando proyecto"
+  513  git remote add origin https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+  514  git push -u origin master
+  515  git branch
+  516  ls
+  517  nano Prueba3
+  518  git commit -am "Se modifico el archivo -Prueba3-"
+  519  git checkout -b rama1
+  520  ls
+  521  git checkout -b rama2
+  522  git checkout -b rama2
+  523  git checkout master
+  524  git push origin --all
+  525  git checkout -b rama3
+  526  git push origin --all
+  527  git branch
+  528  git checkout master
+  529  git merge rama1
+  530  git merge rama2
+  531  git merge rama3
+  532  git branch
+  533  nano Prueba3
+  534  git commit -am "Modificnado la linea uno del archivo Prueba3"
+  535  git checkout rama1
+  536  nano Prueba3
+  537  git commit -am "Se modifico la linea uno a Ich bin derjenige Linie del archivo -Prueba3-"
+  538  git checkout rama2
+  539  nano Prueba3
+  540  git commit -am "SE HA MODIFICADO EL ARCHIVO -Prueba3- en la linea numero 1"
+  541  git checkout rama3
+  542  nano Prueba3
+  543  git commit -am "Se ha modificado la linea uno del archivo Prueba3"
+  544  git checkout master
+  545  git push
+  546  git branch
+  547  git merge rama1
+  548  git status
+  549  git add -a
+  550  git add .
+  551  git status
+  552  git commit -am "..."
+  553  git status
+  554  git merge rama1
+  555  git merge rama2
+  556  git mergetool
+  557  git status
+  558  git add -A
+  559  git status
+  560  git commit 
+  561  git push
+  562  git merge rama3
+  563  git mergetool
+  564  git status
+  565  git add .
+  566  git commit -am "Archivo corregido"
+  567  git push
+  568  git branch
+  569  ls
+  570  nano Prueba1
+  571  git status
+  572  git stash
+  573  git status
+  574  git stash list
+  575  git checkout rama1
+  576  git stash list
+  577  nano Prueba1
+  578  git status
+  579  git stash
+  580  git stash list
+  581  git branch
+  582  git checkout master
+  583  git stash list
+  584  git stash pop stash@{1}
+  585  git add -a
+  586  git status
+  587  git commit -am "Archivo de stash"
+  588  git push
+  589  git push
+  590  git submodule add https://github.com/AlejandraBecerril/Submodulo.git
+  591  git status
+  592  git commit -m "Se agregó un submodulo"
+  593  git push
+  594  ls
+  595  nano Prueba1
+  596  git commit -am "se modifico archivo para probar reset"
+  597  git push
+  598  ls
+  599  nano Terminal.txt
+  600  git status
+  601  git add -A
+  602  git commit -m "Se agregó archivo Terminal.txt donde vienen todos los comandos asi como los resultados obtenidos."
+  603  git push
+  604  gitk --all
+  605  gitk
+  606  gitk --all
+  607  nano hist.txt
+  608  history
+  609  git log --pretty=oneline --graph --decorate --all
+  610  git log --pretty=oneline --graph --decorate --allgit log --oneline --graph --color --all --decorate
+  611  git log --oneline --graph --color --all --decorate
+
+
