@@ -1,0 +1,624 @@
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ cd ..
+desarrollo@desarrollo-M17xR3:~/Documents$ ls
+flask-app  Permisos_Usuarios.ods  pruebaConceptoGit  Untitled 1.odt
+desarrollo@desarrollo-M17xR3:~/Documents$ mkdir pruebaConceptoGit
+desarrollo@desarrollo-M17xR3:~/Documents$ cd pruebaConceptoGit/
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ touch Prueba1
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ tocuh Prueba2
+No command 'tocuh' found, did you mean:
+ Command 'touch' from package 'coreutils' (main)
+tocuh: command not found
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ touch Prueba2
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ touch Prueba3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git init
+Initialized empty Git repository in /home/desarrollo/Documents/pruebaConceptoGit/.git/
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Prueba1
+	Prueba2
+	Prueba3
+
+nothing added to commit but untracked files present (use "git add" to track)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git add -A
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -m "Iniciando proyecto"
+[master (root-commit) 623927e] Iniciando proyecto
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Prueba1
+ create mode 100644 Prueba2
+ create mode 100644 Prueba3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git remote add origin https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push -u origin master
+Username for 'https://github.com': AlejandraBecerril
+Password for 'https://AlejandraBecerril@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 233 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git branch
+* master
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ ls
+Prueba1  Prueba2  Prueba3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ nano Prueba3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "Se modifico el archivo -Prueba3-"
+[master 673da78] Se modifico el archivo -Prueba3-
+ 1 file changed, 5 insertions(+)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout -b rama1
+Switched to a new branch 'rama1'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ ls
+Prueba1  Prueba2  Prueba3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout -b rama2
+Switched to a new branch 'rama2'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout -b rama2
+fatal: A branch named 'rama2' already exists.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push origin --all
+Username for 'https://github.com': AlejandraBecerril        
+Password for 'https://AlejandraBecerril@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 298 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+   623927e..673da78  master -> master
+ * [new branch]      rama1 -> rama1
+ * [new branch]      rama2 -> rama2
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout -b rama3
+Switched to a new branch 'rama3'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push origin --all
+Username for 'https://github.com': ALejandraBecerril 
+Password for 'https://ALejandraBecerril@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+ * [new branch]      rama3 -> rama3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git branch
+  master
+  rama1
+  rama2
+* rama3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git merge rama1
+Already up-to-date.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git merge rama2
+Already up-to-date.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git merge rama3
+Already up-to-date.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git branch
+* master
+  rama1
+  rama2
+  rama3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ nano Prueba3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "Modificnado la linea uno del archivo Prueba3"
+[master 87aded0] Modificnado la linea uno del archivo Prueba3
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout rama1
+Switched to branch 'rama1'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ nano Prueba3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "Se modifico la linea uno a Ich bin derjenige Linie del archivo -Prueba3-"
+[rama1 81953db] Se modifico la linea uno a Ich bin derjenige Linie del archivo -Prueba3-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout rama2
+Switched to branch 'rama2'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ nano Prueba3desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "SE HA MODIFICADO EL ARCHIVO -Prueba3- en la linea numero 1"
+[rama2 0416aa7] SE HA MODIFICADO EL ARCHIVO -Prueba3- en la linea numero 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout rama3
+Switched to branch 'rama3'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ nano Prueba3desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "Se ha modificado la linea uno del archivo Prueba3"
+[rama3 92f6b2e] Se ha modificado la linea uno del archivo Prueba3
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': AlejandraBecerril
+Password for 'https://AlejandraBecerril@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+   673da78..87aded0  master -> master
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git branch
+* master
+  rama1
+  rama2
+  rama3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git merge rama1
+Auto-merging Prueba3
+CONFLICT (content): Merge conflict in Prueba3
+Automatic merge failed; fix conflicts and then commit the result.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+	both modified:   Prueba3
+
+no changes added to commit (use "git add" and/or "git commit -a")
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git add .
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+	modified:   Prueba3
+
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "..."
+[master 2db760b] ...
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git merge rama1
+Already up-to-date.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git merge rama2
+Auto-merging Prueba3
+CONFLICT (content): Merge conflict in Prueba3
+Automatic merge failed; fix conflicts and then commit the result.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare emerge vimdiff
+Merging:
+Prueba3
+
+Normal merge conflict for 'Prueba3':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (meld): 
+Prueba3 seems unchanged.
+Was the merge successful? [y/n] y
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+	modified:   Prueba3
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Prueba3.orig
+
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git add -A
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+	modified:   Prueba3
+	new file:   Prueba3.orig
+
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit 
+[master c685ebb] Merge branch 'rama2'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': AlejandraBecerril
+Password for 'https://AlejandraBecerril@github.com': 
+Counting objects: 12, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.21 KiB | 0 bytes/s, done.
+Total 12 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 1 local objects.
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+   87aded0..c685ebb  master -> master
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git merge rama3
+Auto-merging Prueba3
+CONFLICT (content): Merge conflict in Prueba3
+Automatic merge failed; fix conflicts and then commit the result.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare emerge vimdiff
+Merging:
+Prueba3
+
+Normal merge conflict for 'Prueba3':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (meld): 
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+	modified:   Prueba3
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Prueba3.orig
+
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git add .
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "Archivo corregido"
+[master 3a04f9c] Archivo corregido
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': AlejandraBecerril
+Password for 'https://AlejandraBecerril@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 716 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+   c685ebb..3a04f9c  master -> master
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git branch
+* master
+  rama1
+  rama2
+  rama3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ ls
+Prueba1  Prueba2  Prueba3  Prueba3.orig
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ nano Prueba1
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Prueba1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git stash
+Saved working directory and index state WIP on master: 3a04f9c Archivo corregido
+HEAD is now at 3a04f9c Archivo corregido
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git stash list
+stash@{0}: WIP on master: 3a04f9c Archivo corregido
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout rama1
+Switched to branch 'rama1'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git stash list
+stash@{0}: WIP on master: 3a04f9c Archivo corregido
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ nano Prueba1
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch rama1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Prueba1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git stash
+Saved working directory and index state WIP on rama1: 81953db Se modifico la linea uno a Ich bin derjenige Linie del archivo -Prueba3-
+HEAD is now at 81953db Se modifico la linea uno a Ich bin derjenige Linie del archivo -Prueba3-
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git stash list
+stash@{0}: WIP on rama1: 81953db Se modifico la linea uno a Ich bin derjenige Linie del archivo -Prueba3-
+stash@{1}: WIP on master: 3a04f9c Archivo corregido
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git branch
+  master
+* rama1
+  rama2
+  rama3
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git stash list
+stash@{0}: WIP on rama1: 81953db Se modifico la linea uno a Ich bin derjenige Linie del archivo -Prueba3-
+stash@{1}: WIP on master: 3a04f9c Archivo corregido
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git stash pop stash@{1}
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Prueba1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped stash@{1} (1336c70f87471581ff0313bb661f03cab13bce8f)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Prueba1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "Archivo de stash"
+[master 1c25896] Archivo de stash
+ 1 file changed, 7 insertions(+)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': AlejandarBecerrl
+Password for 'https://AlejandarBecerrl@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/AlejandraBecerril/pruebaConceptoGit.git/'
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': AlejandraBecerril
+Password for 'https://AlejandraBecerril@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 576 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+   3a04f9c..1c25896  master -> master
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git submodule add https://github.com/AlejandraBecerril/Submodulo.git
+Cloning into 'Submodulo'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   .gitmodules
+	new file:   Submodulo
+
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -m "Se agregó un submodulo"
+[master b53c4f2] Se agregó un submodulo
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 Submodulo
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': AlejandraBecerril
+Password for 'https://AlejandraBecerril@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 406 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+   1c25896..b53c4f2  master -> master
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ ls
+Prueba1  Prueba2  Prueba3  Prueba3.orig  Submodulo
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ nano Prueba1
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git commit -am "se modifico archivo para probar reset"
+[master 8a86c5c] se modifico archivo para probar reset
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': AlejandraBecerril
+Password for 'https://AlejandraBecerril@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AlejandraBecerril/pruebaConceptoGit.git
+   b53c4f2..8a86c5c  master -> master
+desarrollo@desarrollo-M17xR3:~/Documents/pruebaConceptoGit$ ls
+Prueba1  Prueba2  Prueba3  Prueba3.orig  Submodulo
+
